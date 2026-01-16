@@ -1,5 +1,3 @@
-# Retail_sales_analysis_withSql_p1
-
 # 🛒 Retail Sales Analysis – SQL Project
 
 ## 📌 Project Overview
