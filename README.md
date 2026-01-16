@@ -86,14 +86,34 @@ WHERE transactions_id IS NULL
 
 * Total transactions by **gender per category**
 
-### 5️⃣ Time-Based Insights
 
-* Best selling month per year (using window functions)
-* Sales distribution by **time shift**:
+## 🧠 Query Optimization & Multiple Approaches
 
-  * Morning (< 12)
-  * Afternoon (12–17)
-  * Evening (> 17)
+### ⏰ Sales by Time Shift (Morning / Afternoon / Evening)
+
+**Business Question:**  
+How many orders occur during Morning, Afternoon, and Evening time shifts?
+
+This problem was intentionally solved using **three different SQL approaches** to demonstrate that the **same business question can be answered in multiple ways**, each with different levels of readability, efficiency, and scalability.
+
+#### 🔹 Solution 1: Subquery-Based Approach
+- Uses a subquery with a `CASE` statement
+- Beginner-friendly and easy to understand
+- Clearly separates logic into steps
+
+#### 🔹 Solution 2: Single Query with CASE
+- More concise than the subquery approach
+- Eliminates unnecessary nesting
+- Improves readability and performance
+
+#### 🔹 Solution 3: CTE with Custom Ordering (Recommended)
+- Uses a `WITH` clause (CTE)
+- Most readable and scalable solution
+- Allows logical ordering of shifts (Morning → Afternoon → Evening)
+- Closest to **production-level SQL practices**
+
+👉 **The CTE-based solution is considered the final and optimal approach** for real-world use.
+
 
 ---
 
@@ -111,16 +131,17 @@ WHERE transactions_id IS NULL
 
 ## 🛠️ Tools & Technologies
 
-* **Database:** PostgreSQL / MySQL (SQL Standard)
+* **Database:** PostgreSQL 
 * **Language:** SQL
-* **Environment:** Any SQL-supported IDE (pgAdmin, MySQL Workbench, etc.)
+* **Environment:**  pgAdmin
+* **Tools for Data Cleaning:** Excel
 
 ---
 
 ## 🎯 Key Learnings
 
 * Hands-on experience with **real-world sales data**
-* Improved understanding of **data cleaning in SQL**
+* Improved understanding of **data cleaning in SQL And Excel **
 * Learned to derive **business insights using analytical queries**
 * Gained confidence using **window functions and CTEs**
 
@@ -140,7 +161,7 @@ WHERE transactions_id IS NULL
 **Chandan Mistry**
 CSE Student | Aspiring Data Analyst
 
-📧 Contact: *(Add your email / LinkedIn here)*
+📧 Contact: *Chandanmistry844@gmail.com*
 
 ---
 
